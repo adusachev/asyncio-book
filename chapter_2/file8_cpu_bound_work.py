@@ -17,13 +17,13 @@ async def main():
     await task_cpu
     await task_io
 
-@async_timed
-async def main():
-    task_io = asyncio.create_task(delay(3))
-    task_cpu = asyncio.create_task(cpu_bound_work())
-    # здесь возникнет блокировка <----------
+# @async_timed
+# async def main():
+#     task_io = asyncio.create_task(delay(3))
+#     task_cpu = asyncio.create_task(cpu_bound_work())
+#     # здесь возникнет блокировка <----------
 
-    await task_cpu
-    await task_io
+#     await task_cpu
+#     await task_io
 
 asyncio.run(main())
