@@ -1,16 +1,16 @@
 ## asyncio book
 
 
-Setup:
+How to run:
+```sh
+cd <PATH_TO_REPO>
+```
+
 ```sh
 export PYTHONPATH=${PYTHONPATH}:$(pwd)/util
 ```
 
-How to run:
 ```sh
-cd <REPO>
-```
-```sh
-python3 chapter_2/file2.py
+python3 chapter_2_asyncio_basics/file1.py
 ```
 
