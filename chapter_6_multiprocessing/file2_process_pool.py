@@ -17,8 +17,8 @@ if __name__ == "__main__":
     start = time.time()
 
     with Pool() as process_pool:
-        result_1 = process_pool.apply_async(count, args=(100_000_000,))
-        result_2 = process_pool.apply_async(count, args=(200_000_000,))
+        result_1 = process_pool.apply_async(count, args=(200_000_000,))
+        result_2 = process_pool.apply_async(count, args=(100_000_000,))
         print(result_1.get())  # blocking
         print(result_2.get())
         # result_1 = process_pool.apply(count, args=(100_000_000,))  # blocking
