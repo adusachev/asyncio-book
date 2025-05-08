@@ -1,3 +1,5 @@
+TRUNCATE TABLE brand, product, product_color, product_size, sku
+
 create table if not exists brand (
     brand_id serial primary key,
     brand_name text not null
@@ -36,3 +38,7 @@ comment on table sku is 'конкретный предмет, выставлен
 INSERT INTO product_color VALUES (1, 'Blue'), (2, 'Black');
 INSERT INTO product_size VALUES (1, 'Small'), (2, 'Medium'), (3, 'Large');
 
+INSERT INTO brand (brand_name)
+SELECT 
+    substr(md5(random()::text), 1, 8)
+FROM generate_series(1, 10000) AS gs;
